@@ -8,3 +8,7 @@ export function getList() {
         payload: request
     }
 }
+
+export function create(values) {
+    console.log(values)
+}
