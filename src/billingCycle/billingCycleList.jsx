@@ -21,5 +21,5 @@ class BillingCycleList extends Component {
         )
     }
 }
-
+const mapStateToProps = state => ({list: state.BillingCycle.list})
 export default BillingCycleList
