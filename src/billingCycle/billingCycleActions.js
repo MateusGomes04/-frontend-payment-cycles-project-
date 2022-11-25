@@ -10,5 +10,8 @@ export function getList() {
 }
 
 export function create(values) {
-    console.log(values)
+    axios.post(`${BASE_URL}/billingCycle`, values)
+    return {
+        type: "TEMP"
+    }
 }
