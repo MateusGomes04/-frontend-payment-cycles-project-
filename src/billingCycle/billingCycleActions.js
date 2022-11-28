@@ -24,6 +24,10 @@ return submit(values, "put")
 
 }
 
+export function remove(values) {
+    return submit(values, "delete")
+}
+
 function submit(values, method) {
 
     return dispatch => {
