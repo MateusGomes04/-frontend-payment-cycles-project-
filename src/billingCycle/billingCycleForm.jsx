@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Connect } from "react-redux";
+import { connect, Connect } from "react-redux";
 import { bindActionCreators } from "redux"; 
 import { reduxForm, Field } from "redux-form";
 
@@ -30,5 +30,6 @@ class BillingCycleForm extends Component {
         )
     }
 }
-
-export default reduxForm({form: "billingCycleForm", destroyOnUnmount: false})(BillingCycleForm)
+BillingCycleForm = reduxForm({form: "billingCycleForm", destroyOnUnmount: false})(BillingCycleForm)
+const mapDispatchToProps = dispatch => bindActionCreators({init}, dispatch)
+export default connect(null, mapDispatchToProps)(BillingCycleForm)
